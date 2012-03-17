@@ -1,0 +1,15 @@
+Standard In: Basic plugin to store keys pressed and provide a callback with the string of characters.
+
+Designed to support barcode readers for kiosks, 
+
+Example:
+
+$(document).stdin(function (string) {
+  alert("You entered the following: '" + string + "'");
+}, {timeout: 1000});
+
+After a second delay it will alert the characters entered.
+
+Options:
+timeout: millisecond delay
+stopChar: array of characters that will trigger the callback.  Most barcode scanners end with either a tab or newline.
